@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import ReactStars from "react-rating-stars-component";
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import { Link } from 'react-router-dom';
 function Navbarr({settext, setrate}) {
   const [show, setshow] = useState(false)
 
@@ -23,15 +24,15 @@ function Navbarr({settext, setrate}) {
             <Button variant="outline-success" className='buttonn'>Search</Button>
           </Form>
           <h3 className='title2'>Sharing a few of our favorite movies</h3>
-          <div>
-          <div className='btn'>
-<button className='btn2' onClick={()=>setshow(!show)}>Click here show menu</button>
+          <div className='menu2'>
+          
+ <button className='btn2' onClick={()=>setshow(!show)}>Click here show menu</button><div className='btn'>
       </div>
       {show?<div className='menu'>
      <ul>
-     <a href='#'> <li>Movie</li></a>
-      <a href='#'><li>About</li></a>
-      <a href='#'><li>Contact</li></a>
+     <a href='#'> <li><Link to="/" style={{textDecoration:"none", color:"black"}}>Home</Link></li></a>
+      <a href='#'><li><Link to="/about" style={{textDecoration:"none", color:"black"}} >About</Link></li></a>
+      <a href='#'><li> <Link to="/contact" style={{textDecoration:"none", color:"black"}}>Contact</Link></li></a>
       
      </ul>
      </div>:null}

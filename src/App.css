@@ -22,13 +22,18 @@
     text-shadow: 5px 5px 10px black;
 }
 .menu{
-  margin-top: -109px;
-  border-radius: 0 0 10px 10px;
+  background-color: aliceblue;
+  border-radius: 30px;
+
 }
 li{
-  text-decoration: none;
+  text-decoration: none !important;
+  list-style: none;
+  color: black;
  
 }
+
+a{text-decoration: none !important; }
 li:hover{ color: #33993a; }
 .container{
   display: flex;
@@ -73,3 +78,10 @@ li:hover{ color: #33993a; }
 
 
 
+.menu2{
+  position: absolute;
+  top: 32px;
+}
+.pagecontact{
+  margin-top: 200px;
+}
